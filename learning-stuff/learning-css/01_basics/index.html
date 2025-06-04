@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Basics</title>
+
+    <!-- method 2: of styling using style tag, within the head tag.
+         First, select the element and then style the element
+         within the style tag select the element you wish to style like h2 here for instance, and then using curly braces, 
+         just style whatever you want, be it color, font, size, etc. -->
+    <style>
+      h3 {
+        color: chartreuse;
+      }
+
+      /*targetting multiple elements together.*/
+      h2,
+      p {
+        color: blue;
+      }
+
+      .colorit {
+        color: crimson;
+      }
+    </style>
+
+    <!-- link:css tab-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 style="color: pink">Lorem ipsum dolor sit amet.</h1>
+    <!-- method 1: inline
+         gloabl attribute : style and it certainly has properties like color, etc
+         above we have done in-line styling i.r styling within the line. -->
+
+    <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
+
+    <h3>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati,
+      possimus?
+    </h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae pariatur quo
+      veritatis esse, quidem laboriosam mollitia repudiandae ipsam tempora
+      beatae, nobis sapiente eius dolorum sed possimus. Aliquam enim veniam
+      excepturi omnis tenetur optio alias delectus nostrum minima! Perspiciatis
+      modi animi cum qui, nobis, at, iusto ipsum incidunt magni odit autem atque
+      obcaecati. Eum nesciunt ut deserunt adipisci! Iure, in. Tenetur nobis
+      ipsam debitis quae alias voluptatibus explicabo itaque facilis ducimus
+      atque harum, tempora iusto necessitatibus cum aliquid assumenda autem
+      dolor rerum reiciendis aperiam, soluta non impedit placeat! Porro
+      voluptatibus voluptates libero eius ipsum amet nemo quae hic qui impedit
+      excepturi iusto consectetur eos enim quasi, quibusdam modi omnis est autem
+      optio eligendi. Iure et dolores, officia ducimus tenetur ratione
+      reprehenderit, placeat debitis veritatis ea dolorem a nemo. Odit illo sit,
+      deleniti vitae, obcaecati minima at ullam optio labore magni dicta. Hic
+      ullam provident exercitationem animi odio neque impedit debitis quae.
+    </p>
+
+    <h5 class="colorit">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et provident
+      ipsa aspernatur?
+    </h5>
+
+    <p class="colorit">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis a,
+      molestias praesentium dolore animi dolorum, odit voluptate nulla, nam
+      laboriosam placeat debitis! Veritatis suscipit eum natus nisi quisquam
+      blanditiis quasi, rem doloribus corporis tempore, dolore quam, tempora
+      distinctio facilis vero. Dolor praesentium possimus officiis nam placeat
+      labore cum debitis voluptates, distinctio commodi exercitationem adipisci
+      optio explicabo iste id quidem eius quia! Quae, pariatur ullam laborum
+      fugiat voluptatibus facere consequuntur non tempore incidunt atque vero
+      facilis suscipit accusamus mollitia, adipisci corporis, sint ad aliquid
+      iusto eos dolore dicta delectus consectetur! Maiores itaque, nesciunt nam
+      illum in obcaecati beatae corporis cumque sequi dolore porro voluptate
+      dolor dignissimos repellat exercitationem, ab consequuntur, ad ipsum
+      veritatis quidem quas eum a ducimus. Esse eum incidunt doloremque
+      perspiciatis vel.
+    </p>
+
+    <!-- method 3:
+         we can write our styles creating a separate css file, something like style.css
+         and then adding the link:css+tab to link our files.-->
+  </body>
+</html>
