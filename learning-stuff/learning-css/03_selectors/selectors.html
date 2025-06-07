@@ -1,0 +1,153 @@
+<!-- ctrl+/ is for commenting -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors Example</title>
+    <style>
+      /*1. UNIVERSAL Selector */
+      /* selecting all in one go, each every element and has to be declared right at the start, maybe overwritten later. */
+      * {
+        margin: 10px;
+        padding: 10px;
+        /* border: 2px solid #2c2c2c; */
+        box-sizing: border-box;
+      }
+
+      /*2. TYPE Selector*/
+      /* It tags elements by their tag names or type */
+      p {
+        margin: 10px 10px 10px 10px;
+        padding: 20px 15px 10px 30px;
+        /*it goes clockwise --> top,right,bottom,left  and can be given anything tho ratioanality is the standard call*/
+
+        margin-bottom: 15px;
+      }
+      h2 {
+        padding: 1px 2px 3px; /*it goes like 1to top, 2to left and right and 3at the bottom */
+      }
+
+      h3 {
+        padding: 1px 2px; /*in this case 1is for top and bottom and 2is for left and right */
+      }
+
+      /*3. CLASS Selector*/
+      /* it target classes by putting a (.)dot */
+      .highlight {
+        background-color: #129379;
+      }
+
+      /* 4. ID Selector */
+      /* it targets thr ID attribute. According to specification, one should have only one specification on one web page. 
+      An ID is selected using(#)hash*/
+      #header {
+        background-color: #0f3cae;
+      }
+
+      /* 5. ATTRIBUTE Selector  */
+      input[type="text"] {
+        border: 2px solid #570d94;
+      }
+
+      /* 6.DESCENDANT Selector  */
+      /* read them from right to left. It's written as ___ space descendant. Here, we are targetting the only para that is descendant of article.*/
+      article p {
+        font-style: italic;
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 10px;
+      }
+
+      /* 7. CHILD Selector  */
+      div > p {
+        background-color: #f4f11f54;
+      }
+
+      /* 8. ADJACENT siblings selector */
+      h1 + p {
+        font-weight: bolder;
+      }
+
+      /* 9. General Sibling Selector */
+      h2 ~ p {
+        color: crimson;
+      }
+
+      /* 10. Pseudo class Selector */
+      a:hover {
+        background-color: #21aaf344;
+        text-decoration: none;
+        padding: 10px;
+        color: #fff;
+      }
+
+      /* 11.pseudo element selector */
+      p::first-letter {
+        font-weight: 600;
+      }
+
+      /* 12. grouping selector */
+      /* use comma */
+      h1,
+      h2,
+      h3 {
+        color: #e1139544;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">This is a header</header>
+
+    <h1>Main Heading</h1>
+
+    <p>
+      This para is adjacent to h1 and demonstrates the adjacent sibling
+      Selector.
+    </p>
+
+    <p>This is a regular para showing the type Selector.</p>
+
+    <p class="highlight">
+      This para has the highlight class demonstrating the class Selector.
+    </p>
+
+    <input type="text" placeholder="Enter the text here" />
+
+    <article>
+      <p>This para is inside an article, showing the descedant Selector.</p>
+      <p>this is also another descendant here</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia alias
+        obcaecati porro?
+      </p>
+    </article>
+
+    <div>
+      <p>I'm a child</p>
+      <p>I'm a child</p>
+      <section>
+        <p>I'm a descendant</p>
+      </section>
+      <p>I'm a child</p>
+    </div>
+
+    <h2>SubHeading</h2>
+    <p>
+      This is a sibling para to h2, demonstrating the general sibling selector.
+    </p>
+    <a href="#">Hover over me to see the pseudo-class selector in action.</a>
+
+    <p>
+      This para demonstrates the pseudo-element Selectors with a styled first
+      line and first letter.
+    </p>
+
+    <h3>Heading H3</h3>
+    <p>
+      The headings H1, H2 and H3 use the grouping selector for consistent font
+      font-family.
+    </p>
+  </body>
+</html>
