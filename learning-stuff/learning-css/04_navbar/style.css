@@ -96,3 +96,42 @@ h2 {
   border: 1px solid white;
   border-radius: 2px;
 }
+
+/* nav3 */
+.nav3 {
+  /* margin: 0; */
+  padding: 10px;
+  /* border: none; */
+  background-color: #ebe3c952;
+}
+.nav3 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav3 a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+.nav3 .dropDown-content {
+  display: none;
+}
+.nav3 .dropDown-content a:hover {
+  background-color: #348b94a5;
+}
+.nav3 li {
+  padding: 0;
+  margin: 0;
+  /* background-color: #aa1313; */
+}
+.nav3 .dropDown:hover .dropDown-content {
+  display: block;
+  position: absolute;
+  background-color: #ebe3c952;
+  min-width: 150px;
+}
