@@ -53,12 +53,14 @@ input[type="email"] {
   border: none;
   border-radius: 5px;
   color: #fff;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .login-btn:hover {
-  background-color: #2a0142;
-  border-radius: 5px;
+  /* background-color: #2a0142; */
+  background-color: #ff4081;
+  transform: scale(1.05);
+  /* border-radius: 5px; */
   cursor: pointer;
 }
 svg {
