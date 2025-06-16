@@ -1,0 +1,30 @@
+/* :root {
+  --primary-bg: #5944aa;
+  --text-color: #ffffff;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a090c;
+  font-family: "Outfit", sans-serif;
+  padding: 0;
+  line-height: 1.6;
+  color: #fff;
+}
+.container {
+  padding: 10px;
+  background-color: #07393c;
+  display: flex;
+}
+h1 {
+  color: #f0edee;
+  text-align: center;
+}
+.nav {
+  display: inline;
+}
