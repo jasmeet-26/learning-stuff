@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexbox</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Mastering Flexbox</h1>
+      <p>
+        There are 2 types of access : A)Main access B)Other access. For the web
+        the main access in flexbox goes from LEFT to RIGHT --> Horizontally
+      </p>
+      <p>
+        Flexbox is a way in CSS to arrange items inside a box. When you turn it
+        on using <code>display: flex</code>, all the items inside the box line
+        up in a row by default. It helps you control how those items move, grow,
+        shrink, or align — without needing complicated code. It's useful when
+        you're trying to place things next to each other or space them out
+        evenly.
+      </p>
+    </header>
+    <div class="container">
+      <!-- container is a common class that will always run through-->
+      <h2>1.Default Flex(Row)</h2>
+      <p>
+        The default flex direction is row from left to right. By default: Items
+        are placed horizontally (in a row). They do not wrap to the next line
+        (they may shrink instead).
+      </p>
+      <br />
+      <div class="flex-container">
+        <div class="circle pastle1">1</div>
+        <div class="circle pastle2">2</div>
+        <div class="circle pastle3">3</div>
+        <div class="circle pastle4">4</div>
+        <div class="circle pastle5">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>2.Flex Direction(column)</h2>
+      <p>
+        flex-direction has either column/ reverse column/ row(which is default)/
+        row revese also. flex-direction: column; makes flex items stack
+        vertically (top to bottom) instead of horizontally.
+      </p>
+      <div class="flex-container" style="flex-direction: column">
+        <!-- we have column reverse also as flex-direction -->
+        <div class="circle pastle1">1</div>
+        <div class="circle pastle2">2</div>
+        <div class="circle pastle3">3</div>
+        <div class="circle pastle4">4</div>
+        <div class="circle pastle5">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>3.Justify Content- space between</h2>
+      <p>
+        <strong>justify-content</strong>
+        controls how flex items are spaced along the main axis.<br />
+        Common values: flex-start --> items start at the beginning<br />
+        flex-end --> items at the end <br />
+        center --> items in the center<br />
+        space-between --> equal space between items <br />
+        space-around --> equal space around items <br />
+        space-evenly --> equal space between and around <br />
+        Used with display:flex;.
+      </p>
+      <!-- justify controls everything that runs on main access left to right -->
+      <div class="flex-container" style="justify-content: space-between">
+        <div class="circle pastle1">1</div>
+        <div class="circle pastle2">2</div>
+        <div class="circle pastle3">3</div>
+        <div class="circle pastle4">4</div>
+        <div class="circle pastle5">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>4.Align items:centre</h2>
+      <p>
+        <strong>align-items</strong> controls alignment along the cross axis.<br /><br />
+
+        <strong>Common values:</strong><br />
+        flex-start – items align to the start<br />
+        flex-end – items align to the end<br />
+        center – items are centered<br />
+        stretch – items stretch to fill (default)<br />
+        baseline – items align by text baseline
+      </p>
+      <!-- anything that has align controls the top-bottom access or the other access -->
+      <div class="flex-container" style="align-items: center">
+        <div class="circle pastle1">1</div>
+        <div class="circle pastle2">2</div>
+        <div class="circle pastle3">3</div>
+        <div class="circle pastle4">4</div>
+        <div class="circle pastle5">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>5.Flex Wrap:Wrap</h2>
+      <p>
+        <code>flex-wrap: wrap;</code>
+        lets flex items move to the next line if they don’t fit in one row. Used
+        with
+        <code>display: flex; style="flex-wrap: wrap; height: auto"</code>
+        Prevents items from squishing in one line Helps create responsive
+        layouts
+      </p>
+      <div class="flex-container" style="flex-wrap: wrap; height: auto">
+        <div class="circle pastle1">1</div>
+        <div class="circle pastle2">2</div>
+        <div class="circle pastle3">3</div>
+        <div class="circle pastle4">4</div>
+        <div class="circle pastle5">5</div>
+        <div class="circle pastle1">6</div>
+        <div class="circle pastle2">7</div>
+        <div class="circle pastle3">8</div>
+        <div class="circle pastle4">9</div>
+        <div class="circle pastle5">10</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>6.Align Content:Space Around (with wrap)</h2>
+      <p>
+        <strong>align-content: space-around</strong> works in a flex container
+        with <code>flex-wrap: wrap</code>. It applies vertical spacing between
+        rows, not individual items. Equal space is added above, between, and
+        below the rows. The container must have a fixed height and enough items
+        to wrap onto multiple lines.
+      </p>
+
+      <div
+        class="flex-container"
+        style="flex-wrap: wrap; align-content: space-around"
+      >
+        <div class="circle pastle1">1</div>
+        <div class="circle pastle2">2</div>
+        <div class="circle pastle3">3</div>
+        <div class="circle pastle4">4</div>
+        <div class="circle pastle5">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>7.Order Property</h2>
+      <p>
+        The <strong>order</strong> property is used in flexbox to control the
+        order of flex items. By default, all items have <code>order: 0</code>.
+        Items with lower order values appear first. It only affects visual
+        layout, not the HTML source order.
+      </p>
+
+      <div class="flex-container">
+        <div class="circle pastle1" style="order: 5">1</div>
+        <div class="circle pastle2" style="order: 4">2</div>
+        <div class="circle pastle3" style="order: 3">3</div>
+        <div class="circle pastle4" style="order: 2">4</div>
+        <div class="circle pastle5" style="order: 1">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>8.Flex Grow</h2>
+      <p>
+        The <strong>flex-grow</strong> property defines how much a flex item
+        will grow relative to others when there is extra space. A value of
+        <code>1</code> means the item can grow and share available space equally
+        with other items that also have <code>flex-grow</code> set.
+        <br />distributing space by ratio.
+      </p>
+
+      <div class="flex-container">
+        <div class="circle pastle1" style="flex-grow: 1">1</div>
+        <div class="circle pastle2" style="flex-grow: 5">2</div>
+        <div class="circle pastle3" style="flex-grow: 2">3</div>
+        <div class="circle pastle4" style="flex-grow: 1">4</div>
+        <div class="circle pastle5" style="flex-grow: 4">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>9.Align Self</h2>
+      <p>it is a property that needs to be injected in each child.</p>
+      <br />
+      <p>
+        The <strong>align-self</strong> property overrides the container’s
+        <code>align-items</code> for a specific flex item. It controls the
+        item’s alignment on the cross axis (vertical by default). Values include
+        <code>auto</code>, <code>flex-start</code>, <code>center</code>,
+        <code>flex-end</code>, and <code>stretch & height:auto</code>.
+      </p>
+
+      <div class="flex-container">
+        <div class="circle pastle1" style="align-self: flex-start">1</div>
+        <div class="circle pastle2" style="align-self: flex-end">2</div>
+        <div class="circle pastle3" style="align-self: center">3</div>
+        <div class="circle pastle4" style="align-self: stretch; height: auto">
+          4
+        </div>
+        <div class="circle pastle5" style="align-self: normal">5</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+  background-color: #f6f2f9;
+}
+h1,
+h2 {
+  color: #333;
+}
+/* making the container a flex-box */
+.flex-container {
+  display: flex;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin: 5px;
+}
+.pastle1 {
+  background-color: #460a67db;
+}
+.pastle2 {
+  background-color: #170966;
+}
+.pastle3 {
+  background-color: #0c7abf;
+}
+.pastle4 {
+  background-color: #0aad30;
+}
+.pastle5 {
+  background-color: #dbd826;
+}
+.container {
+  border: 2px solid black;
+  margin-bottom: 20px;
+  padding: 10px;
+  margin: 30px;
+  border-bottom: 5px solid #f11f1f;
+  border-top: 5px dashed #88dfeedb;
+}
+p {
+  color: black;
+  text-decoration: none;
+}
