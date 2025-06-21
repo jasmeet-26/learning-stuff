@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mastering_grid</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+      h1,
+      h2 {
+        color: #333;
+      }
+      .container {
+        background-color: white;
+        padding: 10px;
+        border: 2px solid #333;
+        margin-bottom: 20px;
+      }
+      .grid-container {
+        display: grid;
+        gap: 10px;
+        background-color: #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .box {
+        background-color: #2c666e;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        text-align: center;
+      }
+      .box:nth-child(even) {
+        background-color: #07393c;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Mastering GRID</h1>
+    <div class="container">
+      <h2>1. Basic Grid 3X3</h2>
+      <p>
+        <strong>Place-content property</strong> : <br />
+        &bull; Aligns the grid tracks (rows and columns) within the container,
+        when there's extra space. <br />
+        &bull; It's like saying: "Where should the entire grid sit in this box?"
+        <br />
+        &bull; Example: center the whole grid block in the container.
+      </p>
+      <div
+        class="grid-container"
+        style="
+          grid-template-columns: repeat(3, 80px);
+          grid-template-rows: repeat(3, 80px);
+          place-content: center;
+          /* place-items: center; */
+        "
+      >
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>2. Grid with different column sizes.</h2>
+      <p>It is Twitter Style Layout.</p>
+      <!-- it is twitter style layout -->
+      <div class="grid-container" style="grid-template-columns: 1fr 2fr 1fr">
+        <div class="box" style="background-color: #a4c2a5">1</div>
+        <div class="box" style="background-color: #566246">2</div>
+        <div class="box" style="background-color: #a4c2a5">3</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>3. Grid with Gaps</h2>
+      <p>Using the gap property like <code>gap:30px;</code> here.</p>
+      <div
+        class="grid-container"
+        style="grid-template-columns: repeat(3, 1fr); gap: 30px"
+      >
+        <div class="box" style="background-color: #ed254e">1</div>
+        <div class="box" style="background-color: #da2476">2</div>
+        <div class="box" style="background-color: #ff101f">3</div>
+        <div class="box" style="background-color: #011936">4</div>
+        <div class="box" style="background-color: coral">5</div>
+        <div class="box" style="background-color: #49111c">6</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>4. Grid item placement</h2>
+      <p>It's like a custom grid placement.</p>
+      <div
+        class="grid-container"
+        style="
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 100px);
+        "
+      >
+        <div class="box" style="grid-column: 1/3; background-color: #582707">
+          1
+        </div>
+        <div class="box" style="background-color: #972d07">2</div>
+        <div class="box" style="grid-row: 2/4; background-color: #582707">
+          3
+        </div>
+        <div class="box" style="grid-column: 2/4; background-color: #972d07">
+          4
+        </div>
+        <div class="box" style="grid-column: 2/4; background-color: #582707">
+          5
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>5. Grid Template Areas</h2>
+      <p>We manipulated grid here explicitly.</p>
+      <div
+        class="grid-container"
+        style="
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(4, 1fr);
+          grid-template-areas: 'header header header' 'sidebar main main' 'sidebar main main' 'footer footer footer';
+        "
+      >
+        <div class="box" style="grid-area: header; background-color: #1e441e">
+          Header
+        </div>
+        <div class="box" style="grid-area: sidebar; background-color: #2a7221">
+          Sidebar
+        </div>
+        <div class="box" style="grid-area: main; background-color: #119822">
+          Main Content
+        </div>
+        <div class="box" style="grid-area: footer; background-color: #152614">
+          Footer
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>6.Auto Fix and MinMax</h2>
+      <p>It is inspired by flex-wrap. It is controlled by parent as well.</p>
+      <div
+        class="grid-container"
+        style="grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))"
+      >
+        <div class="box" style="background-color: #ff701e">1</div>
+        <div class="box" style="background-color: #e32e4f">2</div>
+        <div class="box" style="background-color: #ff701e">3</div>
+        <div class="box" style="background-color: #e32e4f">4</div>
+        <div class="box" style="background-color: #ff701e">5</div>
+        <div class="box" style="background-color: #e32e4f">6</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>7. Alignment and Justification</h2>
+      <div
+        class="grid-container"
+        style="
+          grid-template-columns: repeat(3, 1fr);
+          height: 200px;
+          align-items: start;
+        "
+      >
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>8 Nested Grid</h2>
+      <div class="grid-container" style="grid-template-columns: repeat(3, 1fr)">
+        <div class="box" style="background-color: rgba(0, 0, 0, 0.682)">1</div>
+        <div class="grid-container" style="grid-template-columns: 1fr 1fr">
+          <div class="box" style="background-color: #b87d4b">2.1</div>
+          <div class="box" style="background-color: #b87d4b">2.2</div>
+          <div class="box" style="background-color: #b87d4b">2.3</div>
+          <div class="box" style="background-color: #b87d4b">2.4</div>
+        </div>
+        <div class="box">5</div>
+      </div>
+    </div>
+    <div class="container">
+      <h2>9. Grid with auto rows</h2>
+      <div
+        class="grid-container"
+        style="
+          grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: minmax(100px, auto);
+        "
+      >
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box" style="padding: 40px">
+          5: This one has more content and so it appears stretched out.
+        </div>
+        <div class="box">6</div>
+      </div>
+    </div>
+  </body>
+</html>
