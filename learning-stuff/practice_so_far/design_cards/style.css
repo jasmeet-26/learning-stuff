@@ -3,15 +3,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: linear-gradient(to right, red, blue);
+  background: linear-gradient(100deg, #133c55, #386fa4);
   color: white;
   display: flex;
   height: 100vh;
   flex-direction: column;
 }
 nav {
-  background-color: #eedcdc;
-  padding: 10px 20px;
+  background-color: #133c55;
+  padding: 20px 20px;
+  height: 18px;
 }
 nav ul {
   display: flex;
@@ -19,10 +20,13 @@ nav ul {
   gap: 20px;
   margin: 0;
   padding: 0;
+  justify-content: space-around;
 }
 nav ul li {
+  display: inline-block;
   cursor: pointer;
   color: white;
+  margin: 0 15px;
 }
 main {
   flex-grow: 1;
@@ -34,26 +38,29 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #489d7e;
-  padding: 30px;
+  background-color: #84d2f6;
+  color: #133c55;
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
   text-align: center;
-  max-width: 300px;
+  max-width: 500px;
 }
 .card .img img {
-  width: 100%;
+  width: 200px;
   height: auto;
   border-radius: 10px;
   margin-bottom: 15px;
+  display: block;
 }
 .card h2 {
   margin: 10px 0 5px;
   font-size: 1.5em;
+  display: block;
 }
 .card p {
   font-size: 0.95em;
-  color: #ccc;
+  color: #fff;
   margin-bottom: 20px;
 }
 .buttons {
@@ -67,28 +74,27 @@ button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  color: white;
   font-weight: bold;
   transition: 0.3s ease-in-out;
 }
 .buy {
-  background-color: #00cc66;
-  color: #333;
+  background-color: #386fa4;
+  color: #fff;
 }
 .buy:hover {
-  background-color: #00b359;
+  background-color: #2f5b88;
 }
 .wishlist {
-  background-color: #007744;
-  color: #333;
+  background-color: #59a5d8;
+  color: #fff;
 }
 .wishlist:hover {
-  background-color: #006633;
+  background-color: #4a90ba;
 }
 footer {
   display: block;
   align-items: end;
-  background-color: #111;
+  background-color: #133c55;
   color: white;
   text-align: center;
   padding: 15px 10px;
